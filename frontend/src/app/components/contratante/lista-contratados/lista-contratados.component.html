@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-primary">
+        Candidatos
+      </h2>
+    </div>
+    <div class="col"  style="text-align:right">
+      <button type="button" class="btn btn-success ml-2" routerLink="/Contratado/Tabpreenchimento">Cadastrar Candidato</button>
+    </div>
+  </div>
+</div>
+
+<table class="table table-responsive table-striped">
+  <thead>
+    <tr >
+      <th>#</th>
+      <th>
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+      </th>
+      <th>Candidate</th>
+      <th>E-mail</th>
+      <th>Address</th>
+      <th>Resume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cand of listaCandidatos">
+      <th>{{ cand.num }}</th>
+      <td>
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+      </td>
+      <td>{{ cand.candidato }}</td>
+      <td>{{ cand.email }}</td>
+      <td>{{ cand.endereco }}</td>
+      <td>{{ cand.curriculo }}</td>
+    </tr>
+  </tbody>
+</table>
